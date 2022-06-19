@@ -1,35 +1,82 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .game_board {
-  width: 80%;
+  width: 100%;  
   height: 500px;
-  border: 1px solid #333;
+  border-bottom:  15px solid black;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow: hidden;  
 }
 
 .placa {
-  position:absolute;
-  bottom: 0;
-  width: 80px;  
-  animation: placa_animation 2s infinite linear;  
+  position: absolute;
+  bottom: -3px;
+  width: 80px;       
+  animation: placa_animation 3s infinite linear;
 }
 
 .bart {
   width: 150px;
+  position: absolute;
+  bottom: -19px;  
 }
 
-@keyframes placa_animation{
-  from{
+.jump{
+  animation: jump 500ms ease-out;
+}
+
+.clouds{
+  position: absolute;
+  width: 400px;
+  animation: clouds_animation 20s infinite linear;
+}
+
+
+@keyframes placa_animation {
+  from {
     right: -80px;
   }
 
-  to{
+  to {
     right: 100%;
   }
 }
+
+@keyframes jump {
+  0% {
+    bottom: -19px;
+  }
+
+  40%{
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60%{
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: -19px;
+  }
+}
+
+@keyframes clouds_animation {
+  from{
+    right: -400px;
+  }
+  
+  to {
+    right: 100%;
+  }
+}
+
+
