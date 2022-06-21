@@ -22,8 +22,10 @@ const loop = setInterval(() => {
     bart.style.bottom = `${bartPosition}px`;
 
     bart.src = './imagens/game_over.gif'; 
-    bart.style.width = '75px';
-    bart.style.marginLeft = '30px';
+    bart.style.width = '110px';
+    bart.style.bottom = '-20px';
+    bart.style.marginLeft = '10px';
+    
 
     clearInterval(loop);
   }
